@@ -1,4 +1,7 @@
 # air fryer Acrylamide
+![OY7MK3OQW9RY1UDE2SNI](https://user-images.githubusercontent.com/26485327/71640724-e7af4880-2cd2-11ea-88c0-a40f86082b56.jpg)
+
+<img width="1440" src="https://user-images.githubusercontent.com/26485327/71640746-5d1b1900-2cd3-11ea-8fe4-c1e4f6be50c9.png">
 
 
 # 说好的无油更健康？央视：空气炸锅致癌
