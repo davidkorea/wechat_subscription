@@ -34,9 +34,6 @@
 
 下面来具体讨论一下，如何来选择相对具有更高性价比的按需实例。
 
-### 1.1 Instance Type（Family）
-AWS提供**通用型，计算优化型，内存优化型，存储优化型，加速计算型（GPU）**共五大类别的实例，供用户根据不同使用需求来选择。
-
 首先看一下实例命名规则，`c5d.large`
 - Instance type, c
 - Generation, 5
@@ -48,6 +45,37 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
   - `s`: smaller vCPU and memory
 - Instance size, large
 
+### 1.1 Instance Type and Size
+AWS提供**通用型，计算优化型，内存优化型，存储优化型，加速计算型（GPU）**共五大类别的实例，供用户根据不同使用需求来选择。
+
+相同实例类型，Size每升高一级，配置x2，价格x2。c5.9xlarge的价格 = 2 * (4xlarge价格) + 1 * (xlarge价格)
+![]()
+
+相同实例类型，Generation越新，性能更好，价格更低。迁移至不同代际的实例可能需要对应用进行相应的架构调整和运维调整
+![]()
+
+不同实例类型，比较每ECUs价格，和每G内存价格
+- 1 ECU（Elastic Compute Units）= 1 GHz Intel Xeon processing power. Intel CPU Only
+- 相同的配置，处理比较价格优势外，选择T类型可以获得burst加速
+- 当需要T2，T3在Unlimited mode下burst时，可以考虑及酸性优化实例
+
+
+### 1.2 CPU
+
+目前AWS使用的CPU包含Intel，AMD EPYC，AWS Graviton，虽然不同厂家的CPU，很难使用ECUs（Intel Only）将算力标准化后来比较性能-价格
+
+相同配置下AMD可能会比Intel便宜
+
+### 1。3 instance Software Stack
+- OS: AWS Linux < Linux Distributions < Windows
+- Database: MS SQL Web < MS SQL Standard < MS SQL ENterprise
+
+### 1.4 Tenancy
+Shared < Dedicated Host < Bare Metal
+
+- Dedicated Host：Single AWS account use, can spin multiple Dedicated Instance, charge for whole Host
+- Dedicated Instance: Single AWS account use, charge for Instance
+- Bare Metal: no Virtual Machine Monitor(hypervisor)，cannot devide into small instances to use
 
 
 
