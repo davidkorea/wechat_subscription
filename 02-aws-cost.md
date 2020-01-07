@@ -1,6 +1,4 @@
 
-
-
 ## 不敢使用Spot实例？AWS上云成本优化方法论
 
 众所周知，相对于On-Premise数据中心，除了考虑日常业务负载之外，还需要预留可以应付peak load的能力。而云计算素有“pay-as-you-go”的美称，用多少买多少，即买即用，无需大量先前成本投入。
@@ -24,16 +22,9 @@
 
 需要指明的是，节约成本不是一蹴而就，一劳永逸的。因为随着AWS的不断推陈出新，我们使用的计算资源价格也会随之变化。我们需要做的就是以“day-by-day”的方式。监控日常使用行为，比较更换其它计算资源后的成本，以及转换计算资源所需要的人工成本。
 
-## EC2计算资源
+# EC2计算资源
 
-1. "lift and shift" application migration - On-demand 
-2. SAP，DB - RI
-3. EC2 Fleets Reserved Instance + Spot Instance组合
-- RI，多种类型
-- Spot，2种类型
-
-
-### 1. lift-and-shift 直接迁移
+## 1. lift-and-shift 直接迁移
 
 > **lift-and-shift**: you lift the code out of an environment and shift it to another.
  
@@ -41,7 +32,23 @@
 
 当考虑到服务运行成本以及上云维护成本时，使用与本地服务器相近配置的On-demand实例是比较常见的选择，但该选择可能不是cost-effective的方式。
 
-下面来具体讨论一下，如何来选择相对具有更高性价比的按需实例
+下面来具体讨论一下，如何来选择相对具有更高性价比的按需实例。
+
+### 1.1 Instance Type（Family）
+AWS提供**通用型，计算优化型，内存优化型，存储优化型，加速计算型（GPU）**共五大类别的实例，供用户根据不同使用需求来选择。
+
+首先看一下实例命名规则，`c5d.large`
+- `c`: Instance type
+- `5`: Generation
+- `d`: Additional capabilities
+ - `a`: AMD EPYC processor
+ - `d`: NVMe SSD
+ - `e`: extended memory
+ - `n`: enhanced network
+ - `s`: smaller vCPU and memory
+- `large`: Instance size
+
+
 
 
 
