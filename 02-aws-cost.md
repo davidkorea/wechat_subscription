@@ -143,14 +143,9 @@ normolization factor：
 ## 2.7 Scheduled Reserved Instance
 指定开始时间 和 运行时长，相较于peak-hour按需价格的5%的折扣，off-peak hour的10%的折扣。不是所有Region都支持
 
-
-# 3. EC2 Fleets
-
-EC2 Fleets就是On-demand Instance+ Spot Instance的组合，其中的On-demand实例还可以通过购买RI的方式来获得折扣。这算得上是最为cost-effective的方式。经典使用是将On-demand + Spot实例放在一个Auto Scaling Group，来搭配ELB来使用。
+# 3. Spot Instance
 
 每当提到随着价格变动Spot实例会自动被AWS关掉的情况，很自然地，大家会对于使用Spot实例产生犹豫。但是对于公有云的架构设计，有这么一条原则，就是“Architect for failure”。我们应该使用一群小的实例跑同一个服务，来消除各种不确定因素引起的服务不可用。在这种情况下，我们可以放心大胆的来使用Spot实例来获得更多的优惠折扣。
-
-下面具体介绍一下Spot实例
 
 ## 3.1 Spot Instance Pools
 
@@ -166,14 +161,60 @@ Spot Instance Pools是由特定的实例类型，实例大小，操作系统和A
 ## 3.2 Defined-Duration Spot Instance
 可以预定Spot实例最长运行6小时，期间无中断。大约30%-50%折扣
 
-## 3.2 ELB + ASG + EC2 Fleets
+## 3.3 Request type
+- One-time
+- Persistent
+
+可以在Launch Template的Advanced details中选择
 
 
 
 
 
+# 4. EC2 Fleets
+
+EC2 Fleets就是On-demand Instance+ Spot Instance的组合，其中的On-demand实例还可以通过购买RI的方式来获得折扣。这算得上是最为cost-effective的方式。经典使用是将On-demand + Spot实例放在一个Auto Scaling Group，来搭配ELB来使用。
 
 
+ASG可以通过Launch Configuration和Launch Template来创建。若创建EC2 Fleets则必须使用Launch Template来创建ASG
+
+## 4.1 先决条件
+#### 1. 创建Launch Template
+- AMI
+- Instance Type
+- Key Pair
+- Network Interface
+  - enable “Auto-assign public IP” for non-default VPC using
+#### 2. 创建ELB
+提前创建好负载均衡器，以便在创建ASG时，直接关联已创建好的负载均衡器
+- CLB，无需Target Group，创建好后备用
+- ALB，需要创建Target Group，关联ASG后，会自动将ASG创建的实例注册至该Target Group下
+
+## 4.2 创建ASG
+- select “Launch Template” created already in above steps
+- **Fleet Composition** - `Combine purchase options and instances`
+- **Instance Types**, On-demand实例，按照创建有限顺序排列，建议多余2个。当排在前面的实例由于某种原因无法创建时，会自动以此向下选择实例类型来创建，以满足需要的计算容量
+- **Instances Distribution** - uncheck `Use the default settings to get started quickly`
+
+- **On-Demand Allocation Strategy** - `Prioritized`, 按照上面**Instance Types**中的优先顺序
+- **Maximum Spot Price**
+  - `Use default (recommended)`, 推荐此选项，只要低于按需的价格，都可以创建。以避免自己设定价格总是不能满足，导致创建失败
+  - `Set your maximum price (per instance/hour)`
+- **Spot Allocation Strategy**
+  - `Launch Spot Instances optimally based on the available Spot capacity per Availability Zone`
+  - `Diversify Spot Instances across your [ 2 ] lowest priced instance types per Availability Zone`
+
+- **Optional On-Demand Base** - `Designate the first [ 2 ] instances as On-Demand`
+- **On-Demand Percentage Above Base** - `[ 70 ] % On-Demand and 30% Spot`
+- **Group size** - `Start with [ 5 ] instances`
+- **Network** - 选择自定义VPC时，需要提前在Launch Template中设定地洞分配公有IP
+
+解释如下：
+- ASG默认创建**Group size = **`5`个实例
+- 其中**Optional On-Demand Base = **`2`个On-demand按需实例
+- 剩余3个实例容量，将按照**On-Demand Percentage Above Base = **`70% On-demand, 30% Spot`的比例进行分配
+  - 即，2个On-demand + 1个Spot
+  
 
 
 
