@@ -24,25 +24,57 @@
 
 需要指明的是，节约成本不是一蹴而就，一劳永逸的。因为随着AWS的不断推陈出新，我们使用的计算资源价格也会随之变化。我们需要做的就是以“day-by-day”的方式。监控日常使用行为，比较更换其它计算资源后的成本，以及转换计算资源所需要的人工成本。
 
-## 长期稳定运行的业务
+## EC2计算资源
 
-EC2 Fleets: Reserved Instance + Spot Instance组合
+1. "lift and shift" application migration - On-demand 
+2. SAP，DB - RI
+3. EC2 Fleets Reserved Instance + Spot Instance组合
 - RI，多种类型
 - Spot，2种类型
 
-1. 数据中心迁移上云 "lift and shift" application migration - On-demand 
-1. SAP，DB - RI
 
-## 机器学习
+### 1. lift-and-shift 直接迁移
 
+> **lift-and-shift**: you lift the code out of an environment and shift it to another.
+ 
+应用从本地数据中心迁移上云时，可以考虑直接上云和重构上云两种方式。而直接上云，顾名思义就是将本地应用原封不动的迁移到云端，此种方式最为简单。
+
+当考虑到服务运行成本以及上云维护成本时，使用与本地服务器相近配置的On-demand实例是比较常见的选择，但该选择可能不是cost-effective的方式。
+
+下面来具体讨论一下，如何来选择相对具有更高性价比的按需实例
+
+
+
+
+### 2. SAP，Databases
+
+如果是需要长期稳定运行的服务，比如SAP或是大型数据库，建议考虑使用Reserved Instance，相较于On-demand实例的价格可以节约大约70%。
+
+下面来具体讨论一下RI的不同签约方式
+
+
+
+### 3. EC2 Fleets
+
+EC2 Fleets就是On-demand Instance+ Spot Instance的组合，其中的On-demand实例还可以通过购买RI的方式来获得折扣。这算得上是最为cost-effective的方式。经典使用是将On-demand + Spot实例放在一个Auto Scaling Group，来搭配ELB来使用。
+
+下面分别来介绍一下
+
+
+
+
+
+## 图像处理和机器学习
 - EG
 - EI
 
-## 微服务
+## Serverless
 - Lambda，需要考虑非直接费用，如其他服务激活trigger的费用，以及数据传输费用
   - 事件驱动，轻量，无状态
   - 专注代码开发，无需关心基础架构
   - 测试不同RAM情况下的执行时间，开源工具 Epsagon
+
+## 微服务
 - ECS，不收托管费，针对计算资源付费。EKS，有托管费用
   - container可以提高基础设置的计算使用率，因为Docker engine比hypervisor轻量
   - 使用容器不可避免的管理多cluster
