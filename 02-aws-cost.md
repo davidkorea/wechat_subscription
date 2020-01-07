@@ -210,9 +210,9 @@ ASG可以通过Launch Configuration和Launch Template来创建。若创建EC2 Fl
 - **Network** - 选择自定义VPC时，需要提前在Launch Template中设定地洞分配公有IP
 
 解释如下：
-- ASG默认创建**Group size = **`5`个实例
-- 其中**Optional On-Demand Base = **`2`个On-demand按需实例
-- 剩余3个实例容量，将按照**On-Demand Percentage Above Base = **`70% On-demand, 30% Spot`的比例进行分配
+- ASG默认创建**Group size = `5`**个实例
+- 其中**Optional On-Demand Base = `2`**个On-demand按需实例
+- 剩余3个实例容量，将按照**On-Demand Percentage Above Base = `70% On-demand, 30% Spot`**的比例进行分配
   - 即，2个On-demand + 1个Spot
   
 
