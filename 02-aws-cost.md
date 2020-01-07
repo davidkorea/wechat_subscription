@@ -24,7 +24,9 @@
 
 # EC2计算资源
 
-## 1. lift-and-shift 直接迁移
+## 1. On-demand Instance
+
+lift-and-shift 直接迁移
 
 > **lift-and-shift**: you lift the code out of an environment and shift it to another.
  
@@ -66,7 +68,7 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 
 相同配置下AMD可能会比Intel便宜
 
-### 1。3 instance Software Stack
+### 1.3 instance Software Stack
 - OS: AWS Linux < Linux Distributions < Windows
 - Database: MS SQL Web < MS SQL Standard < MS SQL ENterprise
 
@@ -81,7 +83,9 @@ Shared < Dedicated Host < Bare Metal
 
 
 
-### 2. SAP，Databases
+## 2. Reserved Instance
+
+SAP，Databases
 
 如果是需要长期稳定运行的服务，比如SAP或是大型数据库，建议考虑使用Reserved Instance，相较于On-demand实例的价格可以节约大约70%。
 
@@ -89,7 +93,7 @@ Shared < Dedicated Host < Bare Metal
 
 
 
-### 3. EC2 Fleets
+## 3. EC2 Fleets
 
 EC2 Fleets就是On-demand Instance+ Spot Instance的组合，其中的On-demand实例还可以通过购买RI的方式来获得折扣。这算得上是最为cost-effective的方式。经典使用是将On-demand + Spot实例放在一个Auto Scaling Group，来搭配ELB来使用。
 
@@ -99,17 +103,17 @@ EC2 Fleets就是On-demand Instance+ Spot Instance的组合，其中的On-demand�
 
 
 
-## 图像处理和机器学习
+# 图像处理和机器学习
 - EG
 - EI
 
-## Serverless
+# Serverless
 - Lambda，需要考虑非直接费用，如其他服务激活trigger的费用，以及数据传输费用
   - 事件驱动，轻量，无状态
   - 专注代码开发，无需关心基础架构
   - 测试不同RAM情况下的执行时间，开源工具 Epsagon
 
-## 微服务
+# 微服务
 - ECS，不收托管费，针对计算资源付费。EKS，有托管费用
   - container可以提高基础设置的计算使用率，因为Docker engine比hypervisor轻量
   - 使用容器不可避免的管理多cluster
