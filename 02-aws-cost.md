@@ -38,15 +38,15 @@
 AWS提供**通用型，计算优化型，内存优化型，存储优化型，加速计算型（GPU）**共五大类别的实例，供用户根据不同使用需求来选择。
 
 首先看一下实例命名规则，`c5d.large`
-- `c`: Instance type
-- `5`: Generation
-- `d`: Additional capabilities
- - `a`: AMD EPYC processor
- - `d`: NVMe SSD
- - `e`: extended memory
- - `n`: enhanced network
- - `s`: smaller vCPU and memory
-- `large`: Instance size
+- Instance type, c
+- Generation, 5
+- Additional capabilities
+  - `a`: AMD EPYC processor
+  - `d`: NVMe SSD
+  - `e`: extended memory
+  - `n`: enhanced network
+  - `s`: smaller vCPU and memory
+- Instance size, large
 
 
 
