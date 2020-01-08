@@ -88,6 +88,8 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 
 下面来具体讨论一下RI的不同签约方式。
 
+![image](https://user-images.githubusercontent.com/26485327/71948873-e7540780-3214-11ea-96ba-eabcbd2acd34.png)
+
 ## 2.1 Scope
 
 ### 1. Regional Reservation
@@ -96,7 +98,7 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 - **AZ Flexibility**，所选Region的所有AZ均可以享受RI折扣
 - **Instance Size Flexibility**，For Linux and Unix RI with shared Tenacy，if reserve c5.4xlarge, can apply 2 c5.2xlarge, or 4 c5.xlarge
 
-### 2. AZ-Specific Reservation
+### 2. Zonal / AZ-Specific Reservation
 - no AZ Flexibility and Size Flexibility
 - AWS可以保证在任何需要实例的时候提供，无需担心供给不足的情况
 
