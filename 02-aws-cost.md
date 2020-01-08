@@ -105,7 +105,7 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 
 
 ## 2.2 Offering class
-### 1. Standard Reserved Instance
+### 2.2.1. Standard Reserved Instance
 - can sell
 - can modify
   - change AZ in same Region
@@ -132,7 +132,7 @@ normolization factor：
 ![image](https://user-images.githubusercontent.com/26485327/71952010-6e5aad00-3220-11ea-966d-f8bc7ebaa8f5.png)
 
 
-### 2. Convertible Reserved Instance
+### 2.2.2 Convertible Reserved Instance
 - cannot sell 
 - can modify, same as above
 - can exchange
@@ -144,6 +144,10 @@ normolization factor：
 ![image](https://user-images.githubusercontent.com/26485327/71952277-75ce8600-3221-11ea-8a18-3a0d3b19fd9f.png)
 ![image](https://user-images.githubusercontent.com/26485327/71952319-9b5b8f80-3221-11ea-8398-c11ce034752d.png)
 
+### 2.2.3 Scheduled Reserved Instance
+计划 RI：这些实例可在您预留的时段内启动。通过此选项，您可以获得与可预测的周期性计划相符的容量预留，该计划只需要一天、一周或一个月中的一小部分时间。
+指定开始时间 和 运行时长，相较于peak-hour按需价格的5%的折扣，off-peak hour的10%的折扣。不是所有Region都支持。
+
 
 
 
@@ -154,8 +158,8 @@ normolization factor：
 ![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-per-second-billing.png)
 ![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-per-second-billing-concurrent.png)
 
-
 除此之外，还有**Floating折扣**，设置关联账户，当购买账户还有余量没用完时，可以给关联账户的相应实例使用折扣
+
 
 ## 2.4 Payment
 - ALL Upfront
@@ -163,13 +167,9 @@ normolization factor：
 - No Upfront, billed a discounted hourly rate for every hour
 
 
-
-
 ## 2.5 Expiration
 当签约的1年或者3年期满后，EC2实例会继续运行，但折扣将自动消失。西药在期满前，手动续费
 
-## 2.6 Scheduled Reserved Instance
-指定开始时间 和 运行时长，相较于peak-hour按需价格的5%的折扣，off-peak hour的10%的折扣。不是所有Region都支持
 
 
 
@@ -257,7 +257,7 @@ ASG可以通过Launch Configuration和Launch Template来创建。若创建EC2 Fl
 
 # 4. 图像处理和机器学习
 
-## 4.1 Elastic Graphics 
+## 4.1 Elastic Graphics / Elastic GPU
 
 https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html
 
