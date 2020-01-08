@@ -78,31 +78,32 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 
 
 
+-----
 
 # 2. Reserved Instance
 
 如果是需要长期稳定运行的服务，比如SAP或是大型数据库，建议考虑使用Reserved Instance，相较于On-demand实例的价格可以节约大约75%。
 
-签约时间越长（12个月或36个月），越多的提前付费，折扣越高
+签约时间越长（12个月或36个月），越多的提前付费，折扣越高。需要注意的是，一旦签约购买有，无能取消，只能卖出。
 
 下面来具体讨论一下RI的不同签约方式。
 
 ## 2.1 Scope
 
-### Regional Reservation
+### 1. Regional Reservation
 2 features，折扣或自动应用在符合条件的on-demand实例上
 
 - **AZ Flexibility**，所选Region的所有AZ均可以享受RI折扣
 - **Instance Size Flexibility**，For Linux and Unix RI with shared Tenacy，if reserve c5.4xlarge, can apply 2 c5.2xlarge, or 4 c5.xlarge
 
-### AZ-Specific Reservation
+### 2. AZ-Specific Reservation
 - no AZ Flexibility and Size Flexibility
 - AWS可以保证在任何需要实例的时候提供，无需担心供给不足的情况
 
 
 ## 2.2 Payment
 - ALL Upfront
-- Partial UPfront，charged a discounted hourly rate on a monthly basis
+- Partial UPfront，pay for 50% of ALL Upfront, charged a discounted hourly rate on a monthly basis
 - No Upfront, billed a discounted hourly rate for every hour
 
 ## 2.3 Offering class
@@ -131,7 +132,7 @@ normolization factor：
 - can modify, same as above
 - can exchange
   - change instance family, operating system, and tenancy
-  - **modify** 1 `t2.large` instance into 2 `t2.medium` instances, then **exchange** 1 of 2 `t2.medium` instance into `m3.medium`
+  - **modify** 1 `t2.large` instance into 2 `t2.medium` instances, then **exchange** 1 of 2 `t2.medium` into `m3.medium`
   ![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-split-cri-single.png)
   
 
@@ -144,13 +145,21 @@ normolization factor：
 
 ## 2.5 多实例同小时折扣
 
-同一个自然小时内（01：00 - 01：59），多个符合签约RI条件的on-demand实例可以同时享受折扣，所有实例运行时间加总超过1小时的部分不再享受折扣
+同一个自然小时内（01：00 - 01：59），3600 seconds per clock-hour。多个符合签约RI条件的on-demand实例可以同时享受折扣，所有实例运行时间加总超过1小时的部分不再享受折扣
+
+![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-per-second-billing.png)
+![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-per-second-billing-concurrent.png)
 
 ## 2.6 Expiration
 当签约的1年或者3年期满后，EC2实例会继续运行，但折扣将自动消失。西药在期满前，手动续费
 
 ## 2.7 Scheduled Reserved Instance
 指定开始时间 和 运行时长，相较于peak-hour按需价格的5%的折扣，off-peak hour的10%的折扣。不是所有Region都支持
+
+
+
+
+-----
 
 # 3. Spot Instance
 
