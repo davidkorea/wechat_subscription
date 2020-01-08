@@ -288,7 +288,11 @@ Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网�
 ## 4.2 Elastic Inference
 https://docs.aws.amazon.com/elastic-inference/latest/developerguide/what-is-ei.html
 
+![image](https://user-images.githubusercontent.com/26485327/71954575-196f6480-3229-11ea-805f-57609ba31f30.png)
+
 Lower machine learning inference costs by up to 75%，针对已经训练好的模型来进行推理。而针对于模型训练则需要考虑P实例。P3提供大于125 TFLOPS，而EI提供 1 - 32 TFLOPS 万亿每秒浮点运算，支持TensorFlow和Apache MXNet
+
+除了应用在EC2上面，还可以在Sagemaker的notebook上添加EI
 
 all instance size ok, test t2.nano and t2.micro，Not for Windows instance, test AWS linux, Ubuntu, and RHEL ok
 ![image](https://user-images.githubusercontent.com/26485327/71948507-8aa41d00-3213-11ea-9d27-e1b11cb7cb9f.png)
