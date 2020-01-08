@@ -241,7 +241,13 @@ ASG可以通过Launch Configuration和Launch Template来创建。若创建EC2 Fl
 
 
 # 4. 图像处理和机器学习
+
 ## 4.1 Elastic Graphics 
+
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html
+
+用于图形渲染，部分地区支持。
+
 支持具有 Microsoft Windows Server 2012 R2 或更高版本的 Windows 实例，目前不支持 Linux 实例。
 
 Elastic Graphics 支持各种当前一代的 EC2 实例
@@ -249,15 +255,18 @@ Elastic Graphics 支持各种当前一代的 EC2 实例
 - T2（t2.medium 或更大）
 - C5、C5d、C4、C3、z1d、R5、R5d、R4、R3、X1e、X1、H1、I3、D2、P3 和 P2。
 
-一个 Elastic Graphics 加速器附加到一个 EC2 实例，不能加载到本地服务器使用
+![image](https://user-images.githubusercontent.com/26485327/71946331-d30c0c80-320c-11ea-8d1b-6df83c8fad89.png)
+
+一个 Elastic Graphics 加速器附加到一个 EC2 实例，不能加载到本地服务器使用。
 
 Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网络接口ENI实现的。此弹性网络接口所使用的所有带宽均计入 EC2 实例带宽限制。
 安全组应允许端口 2007 上的所有 TCP 出站流量
 
+![image](https://user-images.githubusercontent.com/26485327/71946469-4ada3700-320d-11ea-9f88-261850a4f2a5.png)
+
 
 使用2018年之后的AMI，无需手动安装驱动。否则需要在实例中安装 Elastic Graphics 驱动程序，由 Amazon 优化的 OpenGL 库，可以检测到附加 Elastic Graphics 加速器的存在并连接到它。
 无法在设备管理器中看到 Elastic Graphics 加速器。单击任务栏通知区域中的 Elastic Graphics 图标，查看是否正确安装了 Elastic Graphics 驱动程序，如果缺少 Elastic Graphics 图标，则需要重新安装。
-
 
 可以通过 CloudWatch 获取 Elastic Graphics 加速器的显存使用量指标
 
