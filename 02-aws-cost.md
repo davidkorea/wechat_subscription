@@ -106,17 +106,14 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 - No Upfront, billed a discounted hourly rate for every hour
 
 ## 2.3 Offering class
-- **Standard** Reserved Instance
+### 1. Standard Reserved Instance
+- can sell
+- can modify
   - change AZ in same Region
   - change scope： AZ-specific <-> regional
   - change size within same instance type
+     - 更改前后的normolization factor需要保持一致，否则不能通过变更请求 c5.4xlarge(32) = 2 c5.2xlarge(32)
 
-- **Convertible** Reserved Instance，除了上面的要素可以更改外，还可以
-  - change instance type, platfrom, scope
-  - change instance generation 
-  - 更改前后的normolization factor需要保持一致，否则不能通过变更请求
-    - c5.4xlarge(32) = 2 c5.2xlarge(32)
-  
 normolization factor：
 - nano - 0.25
 - micro - 0.5
@@ -125,6 +122,15 @@ normolization factor：
 - large - 4
 - xlarge - 8
 - 2xlarge - 16
+
+### 2. Convertible Reserved Instance
+- cannot sell 
+- can modify, same as above
+- can exchange
+  - change instance family, operating system, and tenancy
+  - **modify** 1 `t2.large` instance into 2 `t2.medium` instances, then **exchange** 1 of 2 `t2.medium` instance into `m3.medium`
+
+  
 
 
 ![]()
