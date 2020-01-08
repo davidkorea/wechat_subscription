@@ -279,7 +279,9 @@ Lower machine learning inference costs by up to 75%，针对已经训练好的�
 - Not for Windows instance, test AWS linux, Ubuntu, and RHEL ok
 - GPU connect to instance over network by VPC Endpoint 
 ![](https://docs.aws.amazon.com/elastic-inference/latest/developerguide/images/elastic-inference.png)
-
+  - 安全组 HTTPS + SSH， https://docs.aws.amazon.com/elastic-inference/latest/developerguide/setting-up-ei.html
+  - Endpoint， Find service by name `com.amazonaws.<your-region>.elastic-inference.runtime`
+  ![image](https://user-images.githubusercontent.com/26485327/71948124-53813c00-3212-11ea-8816-47a4892331d1.png)
 
 
 
