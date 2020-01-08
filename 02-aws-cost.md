@@ -273,9 +273,9 @@ Elastic Graphics 支持各种当前一代的EC2实例
 一个 Elastic Graphics 加速器附加到一个 EC2 实例，不能加载到本地服务器使用。
 
 Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网络接口ENI实现的。此弹性网络接口所使用的所有带宽均计入 EC2 实例带宽限制。
-安全组应允许端口 2007 上的所有 TCP 出站流量
+安全组应允许端口2007上的所有TCP出站流量，创建实例时，默认会自动添加2007规则
 
-![image](https://user-images.githubusercontent.com/26485327/71946469-4ada3700-320d-11ea-9f88-261850a4f2a5.png)
+![image](https://user-images.githubusercontent.com/26485327/71954163-b5986c00-3227-11ea-9686-99588e69f8f0.png)
 
 
 使用2018年之后的AMI，无需手动安装驱动。否则需要在实例中安装 Elastic Graphics 驱动程序，由 Amazon 优化的 OpenGL 库，可以检测到附加 Elastic Graphics 加速器的存在并连接到它。
