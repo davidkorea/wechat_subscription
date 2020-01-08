@@ -271,13 +271,12 @@ Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网�
 ## 4.2 Elastic Inference
 https://docs.aws.amazon.com/elastic-inference/latest/developerguide/what-is-ei.html
 
-Lower machine learning inference costs by up to 75%，针对已经训练好的模型来进行推理。而针对于模型训练则需要考虑P实例。
+Lower machine learning inference costs by up to 75%，针对已经训练好的模型来进行推理。而针对于模型训练则需要考虑P实例。P3提供大于125 TFLOPS，而EI提供 1 - 32 TFLOPS 万亿每秒浮点运算，支持TensorFlow和Apache MXNet
 
-- P3提供大于125 TFLOPS，而EI提供 1 - 32 TFLOPS 万亿每秒浮点运算
-- support TensorFlow and Apache MXNet
-- all size ok, test t2.nano and t2.micro
-- Not for Windows instance, test AWS linux, Ubuntu, and RHEL ok
-- GPU connect to instance over network by VPC Endpoint 
+all instance size ok, test t2.nano and t2.micro，Not for Windows instance, test AWS linux, Ubuntu, and RHEL ok
+![image](https://user-images.githubusercontent.com/26485327/71948507-8aa41d00-3213-11ea-9d27-e1b11cb7cb9f.png)
+
+GPU connect to instance over network by VPC Endpoint 
   - **安全组 HTTPS + SSH**， https://docs.aws.amazon.com/elastic-inference/latest/developerguide/setting-up-ei.html
   ![image](https://user-images.githubusercontent.com/26485327/71948216-a9ee7a80-3212-11ea-96d0-dec8e80dca87.png)
   - **VPC **Endpoint**， Find service by name `com.amazonaws.<your-region>.elastic-inference.runtime`
