@@ -1,3 +1,6 @@
+Purchasing Dedicated Host Reservations
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#purchasing-dedicated-host-reservations
+
 
 ## 不敢使用Spot实例？AWS上云成本优化方法论
 
