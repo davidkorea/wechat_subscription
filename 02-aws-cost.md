@@ -139,7 +139,10 @@ normolization factor：
   - change instance family, operating system, and tenancy
   - **modify** 1 `t2.large` instance into 2 `t2.medium` instances, then **exchange** 1 of 2 `t2.medium` into `m3.medium`
   ![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-split-cri-single.png)
-  
+ 
+ 
+![image](https://user-images.githubusercontent.com/26485327/71952277-75ce8600-3221-11ea-8a18-3a0d3b19fd9f.png)
+![image](https://user-images.githubusercontent.com/26485327/71952319-9b5b8f80-3221-11ea-8398-c11ce034752d.png)
 
 
 
