@@ -269,13 +269,16 @@ Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网�
 可以通过 CloudWatch 获取 Elastic Graphics 加速器的显存使用量指标
 
 ## 4.2 Elastic Inference
+https://docs.aws.amazon.com/elastic-inference/latest/developerguide/what-is-ei.html
+
 Lower machine learning inference costs by up to 75%，针对已经训练好的模型来进行推理。而针对于模型训练则需要考虑P实例。
 
-- P3 - 125 TFLOPS ~
-- EI - 1 - 32 TFLOPS 万亿每秒浮点运算
-
-
-
+- P3提供大于125 TFLOPS，而EI提供 1 - 32 TFLOPS 万亿每秒浮点运算
+- support TensorFlow and Apache MXNet
+- all size ok, test t2.nano and t2.micro
+- Not for Windows instance, test AWS linux, Ubuntu, and RHEL ok
+- GPU connect to instance over network by VPC Endpoint 
+![](https://docs.aws.amazon.com/elastic-inference/latest/developerguide/images/elastic-inference.png)
 
 
 
