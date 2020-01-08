@@ -74,7 +74,7 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 - Dedicated Host：Single AWS account use, can spin multiple Dedicated Instance, charge for whole Host
 - Dedicated Instance: Single AWS account use, charge for Instance
 - Bare Metal: no Virtual Machine Monitor(hypervisor)，cannot devide into small instances to use
-
+  - 但是可以选择AWS提供的具有Hyper-V的windows server AMI来启动一个bare metal实例。之后手动从bare metal实例内部创建HyperV虚拟机
 
 
 
