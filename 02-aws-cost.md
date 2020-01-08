@@ -278,12 +278,12 @@ Lower machine learning inference costs by up to 75%，针对已经训练好的�
 - all size ok, test t2.nano and t2.micro
 - Not for Windows instance, test AWS linux, Ubuntu, and RHEL ok
 - GPU connect to instance over network by VPC Endpoint 
-![](https://docs.aws.amazon.com/elastic-inference/latest/developerguide/images/elastic-inference.png)
-  - 安全组 HTTPS + SSH， https://docs.aws.amazon.com/elastic-inference/latest/developerguide/setting-up-ei.html
-  - Endpoint， Find service by name `com.amazonaws.<your-region>.elastic-inference.runtime`
+  - **安全组 HTTPS + SSH**， https://docs.aws.amazon.com/elastic-inference/latest/developerguide/setting-up-ei.html
+  ![image](https://user-images.githubusercontent.com/26485327/71948216-a9ee7a80-3212-11ea-96d0-dec8e80dca87.png)
+  - **VPC **Endpoint**， Find service by name `com.amazonaws.<your-region>.elastic-inference.runtime`
   ![image](https://user-images.githubusercontent.com/26485327/71948124-53813c00-3212-11ea-8816-47a4892331d1.png)
 
-
+<img src="https://user-images.githubusercontent.com/26485327/71766757-b76fe000-2f46-11ea-84a4-95b5bc351496.png" width="500" height="500">
 
 
 -----
