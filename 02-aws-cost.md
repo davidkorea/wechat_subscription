@@ -246,11 +246,9 @@ ASG可以通过Launch Configuration和Launch Template来创建。若创建EC2 Fl
 
 https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html
 
-用于图形渲染，部分地区支持。
+用于图形渲染，部分地区支持。提供1，2，4，8G显存，而不是一块完整的显卡。支持Microsoft Windows Server 2012 R2或更高版本的Windows实例，目前不支持Linux实例。
 
-支持具有 Microsoft Windows Server 2012 R2 或更高版本的 Windows 实例，目前不支持 Linux 实例。
-
-Elastic Graphics 支持各种当前一代的 EC2 实例
+Elastic Graphics 支持各种当前一代的EC2实例
 - M5、M5d、M4、M3、T3（t3.medium 或更大）
 - T2（t2.medium 或更大）
 - C5、C5d、C4、C3、z1d、R5、R5d、R4、R3、X1e、X1、H1、I3、D2、P3 和 P2。
@@ -270,7 +268,11 @@ Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网�
 
 可以通过 CloudWatch 获取 Elastic Graphics 加速器的显存使用量指标
 
-## 4.2 
+## 4.2 Elastic Inference
+Lower machine learning inference costs by up to 75%，针对已经训练好的模型来进行推理。而针对于模型训练则需要考虑P实例。
+
+- P3 - 125 TFLOPS ~
+- EI - 1 - 32 TFLOPS 万亿每秒浮点运算
 
 
 
