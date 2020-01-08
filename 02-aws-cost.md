@@ -281,6 +281,8 @@ Elastic Graphics 加速器和 EC2 实例之间的通信通道是通过弹性网�
 使用2018年之后的AMI，无需手动安装驱动。否则需要在实例中安装 Elastic Graphics 驱动程序，由 Amazon 优化的 OpenGL 库，可以检测到附加 Elastic Graphics 加速器的存在并连接到它。
 无法在设备管理器中看到 Elastic Graphics 加速器。单击任务栏通知区域中的 Elastic Graphics 图标，查看是否正确安装了 Elastic Graphics 驱动程序，如果缺少 Elastic Graphics 图标，则需要重新安装。
 
+![image](https://user-images.githubusercontent.com/26485327/71954352-64d54300-3228-11ea-8f4e-db43b8ad6a0a.png)
+
 可以通过 CloudWatch 获取 Elastic Graphics 加速器的显存使用量指标
 
 ## 4.2 Elastic Inference
