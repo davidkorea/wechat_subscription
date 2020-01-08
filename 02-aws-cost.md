@@ -90,6 +90,7 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 
 ![image](https://user-images.githubusercontent.com/26485327/71948873-e7540780-3214-11ea-96ba-eabcbd2acd34.png)
 
+
 ## 2.1 Scope
 
 ### 1. Regional Reservation
@@ -99,16 +100,11 @@ AWS提供**通用型，计算优化型，内存优化型，存储优化型，加
 - **Instance Size Flexibility**，For Linux and Unix RI with shared Tenacy，if reserve c5.4xlarge, can apply 2 c5.2xlarge, or 4 c5.xlarge
 
 ### 2. Zonal / AZ-Specific Reservation
-- no AZ Flexibility and Size Flexibility
+- no AZ Flexibility and no Size Flexibility
 - AWS可以保证在任何需要实例的时候提供，无需担心供给不足的情况
 
 
-## 2.2 Payment
-- ALL Upfront
-- Partial UPfront，pay for 50% of ALL Upfront, charged a discounted hourly rate on a monthly basis
-- No Upfront, billed a discounted hourly rate for every hour
-
-## 2.3 Offering class
+## 2.2 Offering class
 ### 1. Standard Reserved Instance
 - can sell
 - can modify
@@ -129,6 +125,13 @@ normolization factor：
 - xlarge - 8
 - 2xlarge - 16
 
+![image](https://user-images.githubusercontent.com/26485327/71951871-e5dc0c80-321f-11ea-8c81-689c4735e4df.png)
+
+![image](https://user-images.githubusercontent.com/26485327/71951926-220f6d00-3220-11ea-8da9-32ac96ae8997.png)
+
+![image](https://user-images.githubusercontent.com/26485327/71952010-6e5aad00-3220-11ea-966d-f8bc7ebaa8f5.png)
+
+
 ### 2. Convertible Reserved Instance
 - cannot sell 
 - can modify, same as above
@@ -139,23 +142,30 @@ normolization factor：
   
 
 
-![]()
 
 
-## 2.4 Floating折扣
-设置关联账户，当购买账户还有余量没用完时，可以给关联账户的相应实例使用折扣
-
-## 2.5 多实例同小时折扣
+## 2.3 多实例折扣
 
 同一个自然小时内（01：00 - 01：59），3600 seconds per clock-hour。多个符合签约RI条件的on-demand实例可以同时享受折扣，所有实例运行时间加总超过1小时的部分不再享受折扣
 
 ![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-per-second-billing.png)
 ![](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/ri-per-second-billing-concurrent.png)
 
-## 2.6 Expiration
+
+除此之外，还有**Floating折扣**，设置关联账户，当购买账户还有余量没用完时，可以给关联账户的相应实例使用折扣
+
+## 2.4 Payment
+- ALL Upfront
+- Partial UPfront，pay for 50% of ALL Upfront, charged a discounted hourly rate on a monthly basis
+- No Upfront, billed a discounted hourly rate for every hour
+
+
+
+
+## 2.5 Expiration
 当签约的1年或者3年期满后，EC2实例会继续运行，但折扣将自动消失。西药在期满前，手动续费
 
-## 2.7 Scheduled Reserved Instance
+## 2.6 Scheduled Reserved Instance
 指定开始时间 和 运行时长，相较于peak-hour按需价格的5%的折扣，off-peak hour的10%的折扣。不是所有Region都支持
 
 
