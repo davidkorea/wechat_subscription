@@ -2,6 +2,10 @@ Purchasing Dedicated Host Reservations
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#purchasing-dedicated-host-reservations
 
 
+- https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#HostReservations:sort=hostReservationId
+![image](https://user-images.githubusercontent.com/26485327/72029266-bb925980-32c8-11ea-9688-2443a5454735.png)
+
+
 ## 不敢使用Spot实例？AWS上云成本优化方法论
 
 众所周知，相对于On-Premise数据中心，除了考虑日常业务负载之外，还需要预留可以应付peak load的能力。而云计算素有“pay-as-you-go”的美称，用多少买多少，即买即用，无需大量先前成本投入。
