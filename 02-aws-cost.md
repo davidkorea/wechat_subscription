@@ -1,3 +1,13 @@
+- DH 
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html
+  - https://aws.amazon.com/cn/ec2/pricing/dedicated-instances/
+- DI 
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html
+  - https://aws.amazon.com/cn/ec2/dedicated-hosts/pricing/
+
+
+-----
+
 Purchasing Dedicated Host Reservations
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#purchasing-dedicated-host-reservations
 
