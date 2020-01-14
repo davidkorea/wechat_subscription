@@ -14,7 +14,7 @@
 - 无论怎样，VPC都是属于我自己的，那么为什么还要整出来default和dedicated之分呢？
 
 
-![image](https://user-images.githubusercontent.com/26485327/72311362-bd448e80-36c7-11ea-86be-537c6f4c5b50.png)
+![image](https://user-images.githubusercontent.com/26485327/72311412-efee8700-36c7-11ea-9de0-cfe6ee261df7.png)
 
 ![image](https://user-images.githubusercontent.com/26485327/72311325-9423fe00-36c7-11ea-93a1-7cfd6ce2425a.png)
 
