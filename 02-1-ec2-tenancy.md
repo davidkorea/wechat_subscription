@@ -58,15 +58,17 @@ AWS默认就是这种共享硬件的多租户方式，因为只有一台物理�
 
 虽然叫做裸金属实例，但其实就是一台没有虚拟化层的物理主机。因为没有Hypervisor，所以可以获得比其他专用硬件更好的性能。同时也可以自行选择VMware，HyperV等Hypervisor。
 
-## 1.2 ~~VPC Tenancy~~ One Attribute named “Hardware Tenancy” of VPC
+## 1.2 VPC Tenancy - An Attribute named “Hardware Tenancy” of VPC
 
 ![image](https://user-images.githubusercontent.com/26485327/72313950-858e1480-36d0-11ea-93fd-1bd790bc5930.png)
 
 问题总是这样，绕了一圈又回来了，既然在硬件层面划分了Shared Tenancy共享硬件和Dedicated Tenancy专用硬件，VPC为什么还要划分？你可能会说VPC是一个网络层面的逻辑概念，你创建所有VPC都是专属于你的。而且Tenancy是按照硬件来划分的，也不是按照网络来划分的。没毛病，说的太对了。
 
-而，这实际上是一个误解，创建VPC时，有一个VPC属性的选项，叫做“Hardware Tenancy”，指的是这个VPC中的实例被创建在共享还是专用硬件上。
+而，这实际上是一个误解，创建VPC时，有一个VPC的属性选项，叫做“Hardware Tenancy”，指的是这个VPC中的实例被创建在共享还是专用硬件上。可以理解成一种批量操作。只要是放在Dedicated VPC中的实例，都是被创建在专用硬件上的实例。
 
-可以理解成一种批量操作。只要是放在Dedicated Tenancy VPC中的实例，都是被创建在专用硬件上的实例。
+那么，问题又来了，误解！怪我咯？这个锅必须是AWS来背啊，为什么不能写明白，多写个Hardware会死啊？而且在另一个画面就写的明明白白，找谁说理去！
+![image](https://user-images.githubusercontent.com/26485327/72314414-3b0d9780-36d2-11ea-8f3e-ec4792811195.png)
+
 
 
 
