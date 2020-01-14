@@ -9,16 +9,19 @@
 下面，我们对实例Instance前面的这些定语（Reserved，Dedicated，Spot，Instance，Host）来分2个类别，为大家理清思绪。
 
 
-## 1. Tenancy
-- 通过wizard创建一个instance是，既需要VPC tenancy，又需要选择Instance Tenancy，重复的事情做两遍？
-- 无论怎么样，VPC都是属于我自己的，那么为什么还要整出来default和dedicated之分呢？
-- Instance tenancy表达的其实就是，是否要和其它用户共用一个物理服务器
+# 1. Tenancy
+- 通过wizard创建一个instance时，既要选择VPC Tenancy，又需要选择Instance Tenancy，都是Tenancy，重复的事情要做两遍？
+- 无论怎样，VPC都是属于我自己的，那么为什么还要整出来default和dedicated之分呢？
+
+## 1.1 Instance Tenancy
+- Instance Tenancy表达的其实就是，是否要和其它用户共用一个物理服务器
 - bare metal虽然是一个实例类型，但其实是给了你一个没有hypervisor的物理服务器
-### 1.1 Instance Tenancy
 
-### 1.2 VPC Tenancy
 
-## 2. Purchase options
+
+## 1.2 VPC Tenancy
+
+# 2. Purchase options
 - On-demand
 - Spot
 - Reserved
