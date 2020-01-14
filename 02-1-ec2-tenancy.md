@@ -13,6 +13,12 @@
 - 通过wizard创建一个instance时，既要选择VPC Tenancy，又需要选择Instance Tenancy，都是Tenancy，重复的事情要做两遍？
 - 无论怎样，VPC都是属于我自己的，那么为什么还要整出来default和dedicated之分呢？
 
+
+![image](https://user-images.githubusercontent.com/26485327/72311362-bd448e80-36c7-11ea-86be-537c6f4c5b50.png)
+
+![image](https://user-images.githubusercontent.com/26485327/72311325-9423fe00-36c7-11ea-93a1-7cfd6ce2425a.png)
+
+
 ## 1.1 Instance Tenancy
 - Instance Tenancy表达的其实就是，是否要和其它用户共用一个物理服务器
 - bare metal虽然是一个实例类型，但其实是给了你一个没有hypervisor的物理服务器
