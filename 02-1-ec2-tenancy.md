@@ -13,17 +13,20 @@
 - 通过wizard创建一个instance时，既要选择VPC Tenancy，又需要选择Instance Tenancy，都是Tenancy，重复的事情要做两遍？
 - 无论怎样，VPC都是属于我自己的，那么为什么还要整出来default和dedicated之分呢？
 
-
 ![image](https://user-images.githubusercontent.com/26485327/72311412-efee8700-36c7-11ea-9de0-cfe6ee261df7.png)
 
 ![image](https://user-images.githubusercontent.com/26485327/72311325-9423fe00-36c7-11ea-93a1-7cfd6ce2425a.png)
 
 
+说到租户Tenancy，一般分为两类，
+1. 一个是单租户Single Tenancy，一个是多租户Multi Tenancy。其实简单来说就是，当你创建的EC2虚拟机和其它人创建的虚拟机在同一个物理服务器上的时候，即为多租户，你的EC2叫做Shared Tenancy Instance。
+2. 而当一个物理服务器只归你自己使用时，叫做单租户，你的EC2实例可以称作Dedicated Tenancy Instance。
+
+所以，Tenancy的划分就是看硬件是否共享，硬件仅自己用，就是单租户，硬件和别人共享使用，就是多租户。
+
+
 ## 1.1 Instance Tenancy
-- Instance Tenancy表达的其实就是，是否要和其它用户共用一个物理服务器
-- bare metal虽然是一个实例类型，但其实是给了你一个没有hypervisor的物理服务器
-
-
+其实Instance Tenancy这个词，字面上看起来很难理解其真正含义，而其要表达的意思就是，是否要和其它用户共享一个物理服务器。所以更准确且有助于理解的方式可以称为：共享硬件，专用硬件。
 
 ## 1.2 VPC Tenancy
 
