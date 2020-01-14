@@ -111,7 +111,15 @@ AWS默认就是这种共享硬件的多租户方式，因为只有一台物理�
 
 ## 2.3 Reserved
 
+支持全部4中硬件Tenancy类型，Reserved Dedicated Host需要在专用主机界面购买，其它3中可在Reserved界面实现购买，
 
+- Shared Instance
+- Dedicated Instance
+- Dedicated Host
+- Bare Metal
+
+![image](https://user-images.githubusercontent.com/26485327/72316300-0d781c80-36d9-11ea-9c0b-cddae1845ae2.png)
+![image](https://user-images.githubusercontent.com/26485327/72316331-284a9100-36d9-11ea-88e8-b264e3b881c1.png)
 
 
 
