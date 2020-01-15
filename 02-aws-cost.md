@@ -1,20 +1,3 @@
-- DH 
-  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html
-  - https://aws.amazon.com/cn/ec2/pricing/dedicated-instances/
-- DI 
-  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-instance.html
-  - https://aws.amazon.com/cn/ec2/dedicated-hosts/pricing/
-
-
------
-
-Purchasing Dedicated Host Reservations
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#purchasing-dedicated-host-reservations
-
-
-- https://ap-northeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-northeast-2#HostReservations:sort=hostReservationId
-![image](https://user-images.githubusercontent.com/26485327/72029266-bb925980-32c8-11ea-9688-2443a5454735.png)
-
 
 ## 不敢使用Spot实例？AWS上云成本优化方法论
 
