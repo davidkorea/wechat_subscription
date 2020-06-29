@@ -23,7 +23,7 @@
 
 # 2. 创建Windows虚拟机
 
-这里主要来介绍Windows虚拟机的创建，因为我的场景是政府网站的资料申请。需要注意的是，相比较AWS等公有云厂商，NCP在创建了虚拟机后，还需要一个端口映射的操作。
+这里主要来介绍Windows虚拟机的创建，因为我的场景是政府网站的资料申请。
 
 1. 选择windows镜像
 <img width="1448" src="https://user-images.githubusercontent.com/26485327/85984901-d26a6b00-ba24-11ea-9635-381d118096e8.png">
@@ -42,6 +42,14 @@
 <img width="1179" src="https://user-images.githubusercontent.com/26485327/85984925-d8f8e280-ba24-11ea-9015-9e6f57075514.png">
 
 
+# 3. 远程连接Windows虚拟机
+
+需要注意的是，相比较AWS等公有云厂商，NCP在创建了虚拟机后，还需要一个端口映射的操作才能进行远程访问。相当于，先访问到Naver对外提供的一个堡垒机，通过该堡垒机的端口和创建的虚拟机的端口映射，来访问虚拟机。
+
+<img width="700"  src="https://user-images.githubusercontent.com/26485327/85985544-d480f980-ba25-11ea-9794-192405e399ec.png">
 
 
-# 3. 资费
+1. 
+
+
+# 4. 资费
