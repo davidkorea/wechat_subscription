@@ -49,7 +49,11 @@
 <img width="700"  src="https://user-images.githubusercontent.com/26485327/85985544-d480f980-ba25-11ea-9794-192405e399ec.png">
 
 
-1. 
+1. 设置端口转发Port Forwarding，设置公网堡垒机的3389端口，映射到虚拟机的3389端口
+<img width="1244" src="https://user-images.githubusercontent.com/26485327/85986885-d8158000-ba27-11ea-8e4b-39653e584e05.png">
+<img width="985" src="https://user-images.githubusercontent.com/26485327/85986901-dc419d80-ba27-11ea-9d4f-2b91db09bdd7.png">
+
+2. 获取虚拟机密码
 
 
 # 4. 资费
