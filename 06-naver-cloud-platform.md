@@ -72,3 +72,12 @@
 
 
 # 4. 资费
+
+资费说明：[https://www.ncloud.com/charge/region/ko](https://www.ncloud.com/charge/region/ko)
+
+
+- SSD Server: Compact-g1 2-vCPU 2G-RAM 100G-SSD 81원/h
+- OS: Windows Server 2012 R2 64bit 28원/h
+- 서버 정지 시, 요금 할인이 적용되어 기본 디스크 요금만 청구되는 타입 : Compact 타입 서버, Standard 타입 서버, CPU Intensive 타입 서버
+
+
