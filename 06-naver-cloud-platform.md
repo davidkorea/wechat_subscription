@@ -11,10 +11,22 @@
 
 # 1. NCP账号申请
 
-申请地址：[https://www.ncloud.com/join/type](https://www.ncloud.com/join/type)
-
-<img width="700"  src="https://user-images.githubusercontent.com/26485327/85983327-4eaf7f00-ba22-11ea-868b-d8c342232763.png">
-
 1. 韩国手机号
 2. 韩国信用卡/借记卡
 
+需要韩国手机号进行实名认证，以及绑定支付方式。目前新用户注册，绑定支付方式后赠送10万韩币积分，用于支付云服务使用费用。
+
+申请地址：[https://www.ncloud.com/join/type](https://www.ncloud.com/join/type)
+
+<img width="400"  src="https://user-images.githubusercontent.com/26485327/85983327-4eaf7f00-ba22-11ea-868b-d8c342232763.png">
+
+
+# 2. 创建Windows虚拟机
+
+这里主要来介绍Windows虚拟机的创建，因为我的场景是政府网站的资料申请。需要注意的是，相比较AWS等公有云厂商，NCP在创建了虚拟机后，还需要一个端口映射的操作。
+
+
+
+
+
+# 3. 资费
