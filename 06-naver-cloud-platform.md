@@ -55,5 +55,20 @@
 
 2. 获取虚拟机密码
 
+上传之前下载的密钥，解析虚拟机登陆密码
+- administrator
+- 1234jhkgl
+
+<img width="1239"  src="https://user-images.githubusercontent.com/26485327/85987568-ba94e600-ba28-11ea-81a7-6c84ffe6ce22.png">
+<img width="681" src="https://user-images.githubusercontent.com/26485327/85987582-bd8fd680-ba28-11ea-87cd-2e0d474d2d40.png">
+
+3. 本地客户端远程登陆
+
+输入公网堡垒机IP地址，以及上面获取到的用户名和密码
+
+<img width="595" src="https://user-images.githubusercontent.com/26485327/85987996-60485500-ba29-11ea-8f32-cccca457c3ce.png">
+<img width="595" src="https://user-images.githubusercontent.com/26485327/85988006-650d0900-ba29-11ea-9763-fa1c9de7f139.png">
+
+
 
 # 4. 资费
