@@ -13,6 +13,8 @@
 
 申请地址：[https://www.ncloud.com/join/type](https://www.ncloud.com/join/type)
 
+<img width="700"  src="https://user-images.githubusercontent.com/26485327/85983327-4eaf7f00-ba22-11ea-868b-d8c342232763.png">
+
 1. 韩国手机号
 2. 韩国信用卡/借记卡
 
