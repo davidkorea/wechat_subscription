@@ -25,6 +25,21 @@
 
 这里主要来介绍Windows虚拟机的创建，因为我的场景是政府网站的资料申请。需要注意的是，相比较AWS等公有云厂商，NCP在创建了虚拟机后，还需要一个端口映射的操作。
 
+1. 选择windows镜像
+<img width="1448" src="https://user-images.githubusercontent.com/26485327/85984901-d26a6b00-ba24-11ea-9635-381d118096e8.png">
+
+2. 选择按小时计费方式
+<img width="676" src="https://user-images.githubusercontent.com/26485327/85984914-d6968880-ba24-11ea-9aff-0b017d11ffb5.png">
+
+3. 生成密钥，并下载保存。此密钥用于远程登陆
+<img width="802" src="https://user-images.githubusercontent.com/26485327/85984919-d7c7b580-ba24-11ea-9d14-32e33e087641.png">
+
+4. 创建ACG（Access Control Group），用于开放虚拟机远程桌面的TCP端口3389
+<img width="844" src="https://user-images.githubusercontent.com/26485327/85984923-d8604c00-ba24-11ea-8188-e29732c3400c.png">
+<img width="988" src="https://user-images.githubusercontent.com/26485327/85984920-d8604c00-ba24-11ea-9ae1-659c3ccd3244.png">
+
+5. 审查虚拟机规格，并创建
+<img width="1179" src="https://user-images.githubusercontent.com/26485327/85984925-d8f8e280-ba24-11ea-9015-9e6f57075514.png">
 
 
 
