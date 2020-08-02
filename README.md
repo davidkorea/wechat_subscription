@@ -18,6 +18,7 @@ Rubbernecker 吃瓜群众
 
 
 
+NCP 전솔 및 승인 성공
 
 
 
